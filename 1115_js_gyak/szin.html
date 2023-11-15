@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<Style>
+    .keret {
+        border: 2px solid black;
+        width: 200px;       
+        transition: background-color 1s;
+        
+    }
+
+</Style>
+<body>
+    
+    <div class="keret">
+        <h1>Color picker</h1>
+        <input type="button" value="Red" id="szin" onclick="klick('red')">
+        <input type="button" value="Green" id="szin" onclick="klick('green')">
+        <input type="button" value="Blue" id="szin" onclick="klick('blue')">
+    </div>
+    <Script>
+        
+        function klick(step) {    
+            let szin = step; 
+            console.log(szin, "ok")
+            document.querySelector(".keret").style.backgroundColor = szin;
+            
+        }
+    </Script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Gondoltam egy számra, tippelj</p> 
+    
+    <form>
+        <input type="text" id="tipp">
+        <input type="button" value="ellenőriz" onclick="verify()">
+    </form>
+    <p class="msg"></p>
+    <script>
+        function randomszam(min,max) {
+            return Math.round(Math.random()*(max-min))+min
+        }
+        //A gép sorsoljon ki egy véletlen számot 1 és 100 között:
+        let rand = randomszam(1, 100)
+        //űrlapelemeknek value attribútuma van:
+        function verify() {
+            console.log("klikk volt")
+            //olvassuk ki az input űrlapelem értékét:
+            let tipp = +document.getElementById('tipp').value
+            console.log(tipp, typeof(tipp))
+            document.querySelector('.msg').innerHTML = tipp == randomszam ? "Eltaláltad" : `Nem találtad el, ez volt a szám: ${rand}`
+            document.getElementById('tipp').value = ""
+            rand = randomszam(1, 100)
+        }
+
+    </script>
+</body>
+</html>

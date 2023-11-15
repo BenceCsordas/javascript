@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Változók</title>
+   
+</head>
+<body>
+    <h1>Változók</h1>
+    <script>
+        //var szam1 = 10;
+        let szam = 10;
+        const szin="red"; //konstans változó, nem lehet megváltoztatni.
+        szam += 10;
+        szam++; // inkrementálás
+        szam--;
+        console.log(szam); //20
+        //szin = "green"
+        console.log(typeof szam);
+        console.log(typeof szin);
+
+        szam2 = "150"
+        console.log(typeof szam2);
+        //= operátor:
+        console.log(typeof +szam2);
+        let flag = true;
+        console.log(typeof flag);
+
+        let ujvaltozo = +szam2;
+        console.log(ujvaltozo); //NotANumber
+        ujvaltozo && console.log("Sikerült az átalakítás");
+        let szulev = +prompt("Add meg a születési éved: ");
+        console.log(typeof szulev,";", szulev);
+        let kor = 2023-szulev;
+        console.log(kor + " éves vagy.");
+        let utolsoev = kor+3;
+        console.log(utolsoev)
+
+        console.log("Akkor te most " + kor + " éves vagy.")
+        console.log(`Akkor te most ${kor} éves vagy.`)
+
+    </script>
+
+</body>
+</html>

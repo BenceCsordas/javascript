@@ -1,0 +1,1 @@
+console.log('A body lezáró előtti részben meghívott JS fájl')

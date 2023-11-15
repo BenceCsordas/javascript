@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="a">piros</div>
+    <div id="b">zöld</div>
+    <div id="c">kék</div>
+
+
+    <p id="eredmeny"></p>
+    <script>
+        let a = 10;
+        let b = 20;
+        let c = 56;
+        //rövidebben
+        let [aa, bb, cc] = [1,2,3];
+        console.log(bb)
+        let [v1, v2, v3] = ["red","green","blue"];
+        console.log(v1)
+        document.getElementById("a").style.color=v1;
+        document.getElementById("b").style.backgroundColor=v2;
+        document.getElementById("b").style.color='rgb(255,255,255)';
+        document.getElementById("c").style.fontSize='2rem';
+        document.getElementById("c").innerText='módosítottuk a tartalmás a divnek';
+        document.getElementById("c").innerHTML='módosítottuk a tartalmás a <b>div</b>nek';
+        document.getElementById("c").style.border='1px solid black';
+
+        let h1 = document.createElement('h1')
+        h1.textContent = "JavaScript alapok"
+        document.body.appendChild(h1)
+
+        let nr1 = 10;
+        let nr2 = '10';
+        if(nr1 == nr2) {
+            console.log("A két szám ugyanaz")
+        }else {
+            console.log("A két szám nem ugyanaz")
+        }
+     
+        if(nr1 === nr2) {
+            console.log("A két szám típusa ugyanaz")
+        }else {
+            console.log("A két szám típusa nem ugyanaz")
+        }
+        //Tároljatok el egy számot egy változóban
+        let szam = 34;
+        let tipp = +prompt("Adj meg egy számot: " )
+        if(szam == tipp) {
+            //console.log("Eltaláltad!")
+            document.getElementById("eredmeny").innerHTML='<b> Eltaláltad! </b>';
+            document.getElementById("eredmeny").style.color='rgb(0, 255, 0)';
+            document.getElementById("eredmeny").style.fontSize='2rem';
+        }else {
+            //console.log("Nem találtad el.")
+            document.getElementById("eredmeny").innerHTML='<b> Nem találtad el. </b>';
+            document.getElementById("eredmeny").style.color='rgb(255,0 , 0)';
+            document.getElementById("eredmeny").style.fontSize='2rem';
+        }
+
+
+    </script>
+</body>
+</html>

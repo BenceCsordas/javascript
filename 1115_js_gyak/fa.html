@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    li:nth-child(2){
+        cursor: pointer;
+        font-size: 2rem;
+        color: green;
+        
+    }
+</style>
+<body>
+    <ul>
+        <li>Alma</li>
+        <li onclick="test(this)">Körte</li>
+        <li>Szilva</li>
+    </ul>
+
+    <Script>
+        function test(domObj){
+            console.log(domObj)
+            console.log(domObj.previousElementSibling)
+            console.log(domObj.nextElementSibling)
+            console.log(domObj.parentElement)
+            console.log(domObj.parentElement.children)
+            //a tömb első eleme
+            console.log(domObj.parentElement.children[0])
+        }
+    </Script>
+</body>
+</html>

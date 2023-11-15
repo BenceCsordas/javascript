@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        .szamlalo {
+            display: flex;
+            background-color: cyan;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+        }
+        input {
+            width: 50px;
+            height: 50px;
+        }
+        .keret {
+            display: flex;
+            gap: 50px;
+            height: 50px;
+            
+        }
+    </style>
+<body>
+    <div class="keret">
+    <input type="button" value="-" id="dec" onclick="change(-1)">
+    <div class="szamlalo">0</div>    
+    <input type="button" value="+" id="inc" onclick="change(+1)">
+    </div>
+</body>
+<script>
+    let value = 0;
+    function change(step) {
+        console.log(step);
+        value += step;
+        document.querySelector(".szamlalo").textContent = value; 
+        document.getElementById("dec").disabled =(value<=-5);
+        document.getElementById("inc").disabled =(value>=5);
+    }
+        
+    
+    /*function plus() {
+        document.querySelector(".szamlalo").innerText = szamlalo += 1
+    }
+    
+    function minus() {
+        document.querySelector(".szamlalo").innerText = szamlalo -= 1
+    }*/
+</script>
+</html>

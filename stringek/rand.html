@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="floor">Floor: </p>
+    <p class="round">Round: </p>
+
+    <script>
+        //JS objektumok
+        //Hozz létre véletlen számot 1 és 10 között.
+        const randomNumber = Math.ceil(Math.random()*10);
+        //Hozz létre véletlen számot 10 és 15 között.
+        const randomNumber2 = Math.floor(Math.random()*5+10)
+        
+        //Hozz létre véletlen számot egy intervallumban.
+        let min = 10;
+        let max = 16;
+        const randomNumber3 = Math.floor(Math.random()*(max-min+1))+min
+        const randomNumber4 = Math.round(Math.random()*(max-min))+min
+        console.log(randomNumber3);
+        document.querySelector('.floor').innerText+=randomNumber3;
+        document.querySelector('.round').innerText+=randomNumber4;
+
+        
+    </script>
+</body>
+</html>

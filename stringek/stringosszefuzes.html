@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <p></p>
+        <p class="msg"></p>
+        <p id="msg"></p>
+
+<br>
+
+
+    <script>
+        const username = "Joe";
+        const telnumber = 111222;
+        const time = "16:30";
+        let info = "Nem fogadott hívása volt tőle: " + username + ", " + time + "-kor, a " + telnumber + " telefonszámról."; 
+        document.querySelector('p').innerText=info;
+        info = "Nem fogadott hívása volt tőle: <b>"  + username + "</b>, " + time + "-kor, a " + telnumber + " telefonszámról.";
+        document.querySelector('.msg').innerHTML=info;
+        let info2 = `Nem fogadott hívás ${time}-kor, a ${telnumber} telefonszámról, ${username} keresett.`;
+        document.querySelector('#msg').innerText=info2;
+
+
+    </script>    
+</body>
+</html>

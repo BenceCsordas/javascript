@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            font-size: 3rem;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="change()">Are you happy?</button>
+    <div id="happy">🙂😁😀</div>
+    <div id="sad" class="hide">🥵😭🥺</div>
+</body>
+    <script>
+        function change(){
+            document.getElementById("happy").classList.toggle('hide');
+            document.getElementById("sad").classList.toggle('hide');
+        }
+        
+    </script>
+</html>

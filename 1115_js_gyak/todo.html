@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .keret {
+        border: 2px solid darkblue;
+        width: 250px;
+        padding: 20px;
+        gap: 5px;
+        margin: 0 auto;
+    }
+    ul {
+        list-style-type: none;
+        padding-inline-start: 0px;
+    }
+    li {
+        display: flex;
+        justify-content: space-between;        
+    }
+    h1 {
+        text-align: center;
+    }
+    .done {
+        text-decoration: line-through;
+    }
+</style>
+<body>
+    <div class="keret">
+    <form>
+        <h1>ToDo App</h1>
+        <input type="text" placeholder="Add a new task" id="task">
+        <input type="button" value="Add Task" onclick="klikk()">
+        <ul id="tasks">
+            
+       
+        </ul>        
+    </form>
+</div>
+<Script>
+    function klikk(){
+
+        const task = document.querySelector("#task").value;
+        document.querySelector("#task").value = '';
+        //console.log(task)
+        document.getElementById("tasks").innerHTML+=`
+        <li><span id="pipa" onclick="completed(this)">✅</span>
+            <span>${task}</span>
+            <span id="x" onclick="deleted(this)">❌</span></li>
+        `
+        
+
+
+        
+    }
+    function completed(domObj){
+            domObj.nextElementSibling.classList.toggle('done');
+        }
+        function deleted(domObj){
+            domObj.parentElement.remove()
+        }
+</Script>
+</body>
+</html>

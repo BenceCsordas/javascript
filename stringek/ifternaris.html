@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+        let szam = 100
+        let result
+        if(szam%2==0){
+                result = "Páros"
+            }else {
+                result = "Páratlan"
+            }
+        console.log(result)
+        //Egyszerűbben
+        result = szam%2==0 ? "Páros" : "Páratlan"
+        console.log(result)
+        //Hozz létre egy véletlen számot egy és 100 között
+        random = Math.floor(Math.random()*100)+1
+        console.log(random) 
+        tipp = +prompt("Kérem a tippet: ")
+        result = tipp==random ? "Eltaláltad" : "Nem találtad el"
+        alert(result)
+    </script>
+</body>
+</html>

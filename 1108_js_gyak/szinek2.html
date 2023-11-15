@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid gray;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>  
+    <form>
+        <input type="color" id="szin">
+        <input type="button" value="Színez" onclick="szinezes()">
+    </form>
+    <div id="szinez">
+
+    </div>
+</body>
+    <script>
+        function szinezes() {
+            let szin = document.getElementById("szin").value
+            console.log(szin)
+            document.getElementById("szinez").style.backgroundColor=szin;
+        }
+    </script>
+</html>

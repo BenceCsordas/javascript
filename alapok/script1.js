@@ -1,0 +1,1 @@
+console.log('A head részben meghívott JS fájl')

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Gondoltam egy számra, tippelj</p>     
+    <form>
+        <input type="text" id="tipp" placeholder="írj be egy számot">
+        <input type="button" value="ellenőriz" onclick="verify()" id="button">
+    </form>
+    <p class="msg"></p>
+    <script>
+        let klikk =  0
+        function randomszam(min,max) {
+            return Math.round(Math.random()*(max-min))+min
+        }
+        
+        let rand = randomszam(1, 10)
+        //űrlapelemeknek value attribútuma van:
+        function verify() {
+            klikk++;
+            console.log(klikk)
+            let tipp = +document.getElementById('tipp').value
+            if(tipp == rand){
+                document.querySelector('.msg').innerHTML = "Eltaláltad a számot!"
+            }else if(klikk == 3 || klikk>3){
+                document.querySelector('.msg').innerHTML = `Nincs több lehetőséged, ez volt a szám: ${rand}`
+                document.getElementById("button").disabled = true;
+            }
+            else{
+                document.getElementById('tipp').value = ""
+                document.querySelector('.msg').innerHTML = `Nem találtad el, még ennyi lehetőséged van: ${3-klikk}`
+            }
+            //olvassuk ki az input űrlapelem értékét:
+            //document.querySelector('.msg').innerHTML = tipp == randomszam ? "Eltaláltad" : `Nem találtad el, ez volt a szám: ${rand}`
+        }
+
+    </script>
+</body>
+</html>
